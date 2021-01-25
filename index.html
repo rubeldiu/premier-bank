@@ -111,7 +111,10 @@
          const btnWithdraw= document.getElementById("withdraw"); 
          btnWithdraw.addEventListener('click',function(){
            const withdraw=getInputNumber("withdrawAmount")
-           console.log(withdraw)
+           updateSpanText("currrentWithdraw",withdraw);
+           updateSpanText("currrentBalance",-1* withdraw);
+
+           document.getElementById("withdrawAmount").value="";
             
          })
         function getInputNumber(id){
